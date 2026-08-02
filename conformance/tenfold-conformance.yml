@@ -1,0 +1,30 @@
+generated: '2026-07-21'
+method: derived
+source: openapi/tenfold-openapi.yml
+description: >-
+  Cross-cutting standards conformance for the Tenfold API, derived from the
+  documented endpoint surface and authentication model. No published compliance
+  certifications were found on Tenfold's own surface (the product is now part of
+  LivePerson).
+standards:
+  - id: oauth2
+    conforms: true
+    evidence: OAuth 2.0 password and client-credentials grants documented (v1/v2).
+  - id: jwt-bearer
+    conforms: true
+    evidence: JWT bearer tokens issued at /v2/users/login.
+  - id: oidc
+    conforms: false
+    evidence: No OpenID Connect discovery or id_token documented.
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: Errors are plain HTTP status codes; no application/problem+json.
+  - id: webhooks
+    conforms: true
+    evidence: Real-time call events delivered via configurable webhook.
+  - id: pagination
+    conforms: true
+    evidence: Consistent page / pageSize query parameters across list endpoints.
+  - id: idempotency
+    conforms: false
+    evidence: No idempotency-key header documented.

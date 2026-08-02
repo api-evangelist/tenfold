@@ -1,0 +1,83 @@
+generated: '2026-07-21'
+method: derived
+source: openapi/tenfold-openapi.yml
+description: >-
+  Entity-relationship graph derived from the Tenfold documented endpoint surface.
+  Relationships are inferred from path structure and endpoint semantics; the
+  provider does not publish object schemas, so field-level references are
+  approximate.
+entities:
+  - name: Organization
+    description: A Tenfold customer account (tenant).
+    operations: [getOrganization, getOrganizationHealthCheck]
+    relationships:
+      - type: has_many
+        target: User
+        via: organization
+      - type: has_many
+        target: Team
+        via: organization
+  - name: User
+    description: A member of an organization who places/receives calls.
+    operations: [listUsers, getUser, getCurrentUser, getUserSettings, updateUserSettings]
+    relationships:
+      - type: belongs_to
+        target: Organization
+        via: organization
+      - type: has_many
+        target: Call
+        via: user
+  - name: Team
+    description: A grouping of users for analytics and permissions.
+    operations: [getTeamsAnalytics, getTeamAnalytics]
+    relationships:
+      - type: belongs_to
+        target: Organization
+        via: organization
+      - type: has_many
+        target: User
+        via: team
+  - name: Call
+    description: A telephone call, inbound or outbound.
+    operations: [listCalls, getCall, updateCall, originateCallV1, hangupCallV1, setMatchingRecord, getCallTransferHistory]
+    relationships:
+      - type: belongs_to
+        target: User
+        via: user
+      - type: has_one
+        target: CrmRecord
+        via: matchingRecord
+      - type: has_one
+        target: Transcript
+        via: call
+  - name: CrmRecord
+    description: A record in the connected CRM (contact, lead, account) linked to calls.
+    operations: [createCrmRecord, updateCrmRecord, editCrmRecordV1, removeCrmRecordNumber, getCrmRecordLastInteraction, getCrmRecordActiveInteraction]
+    relationships:
+      - type: has_many
+        target: Interaction
+        via: record
+  - name: Interaction
+    description: A logged interaction (last or active) associated with a CRM record.
+    operations: [getCrmRecordLastInteraction, getCrmRecordActiveInteraction]
+    relationships:
+      - type: belongs_to
+        target: CrmRecord
+        via: record
+  - name: Transcript
+    description: Speech-to-text transcript and derived analytics for a call.
+    operations: [getCallTranscript, getCallKeywords, getCallConversation]
+    relationships:
+      - type: belongs_to
+        target: Call
+        via: call
+  - name: ContactList
+    description: A user-owned list of contacts (BETA).
+    operations: [listContactLists, createContactList, getContactList, updateContactList, deleteContactList, addContactToList, removeContactFromList]
+    relationships:
+      - type: belongs_to
+        target: User
+        via: user
+      - type: has_many
+        target: Contact
+        via: list

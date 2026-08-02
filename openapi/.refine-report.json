@@ -1,0 +1,28 @@
+{
+  "provider": "tenfold",
+  "sources": [
+    "tenfold-analytics-api-openapi.yml",
+    "tenfold-authentication-api-openapi.yml",
+    "tenfold-calls-api-openapi.yml",
+    "tenfold-contact-lists-api-openapi.yml",
+    "tenfold-crm-records-api-openapi.yml",
+    "tenfold-organizations-api-openapi.yml",
+    "tenfold-tracking-api-openapi.yml",
+    "tenfold-users-api-openapi.yml"
+  ],
+  "outputs": [
+    "tenfold-analytics-api-openapi.yml",
+    "tenfold-authentication-api-openapi.yml",
+    "tenfold-calls-api-openapi.yml",
+    "tenfold-contact-lists-api-openapi.yml",
+    "tenfold-crm-records-api-openapi.yml",
+    "tenfold-organizations-api-openapi.yml",
+    "tenfold-tracking-api-openapi.yml",
+    "tenfold-users-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

@@ -1,0 +1,12 @@
+generated: '2026-07-21'
+method: generated
+source: openapi/tenfold-openapi.yml
+skills:
+  - file: tenfold-click-to-call-and-log.md
+    name: Click-to-call and log to CRM
+    api: openapi/tenfold-openapi.yml
+    operations: [originateCallV1, getCall, setMatchingRecord, updateCall]
+  - file: tenfold-call-analytics-and-transcripts.md
+    name: Pull call analytics and transcripts
+    api: openapi/tenfold-openapi.yml
+    operations: [searchAnalytics, getUserCalls, getCallTranscript, getCallKeywords, getCompanyAnalytics]

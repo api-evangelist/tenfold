@@ -1,0 +1,22 @@
+generated: '2026-07-21'
+method: searched
+source: https://apidocs.tenfold.com/
+type: Webhooks
+description: >-
+  Tenfold delivers real-time call events to a subscriber-configured webhook.
+  Captured from the public API reference at https://apidocs.tenfold.com/. Tenfold
+  does not publish an AsyncAPI document; this catalogs the documented webhook
+  event surface.
+webhooks:
+  - name: call.events
+    description: Real-time call lifecycle events delivered to the configured events webhook.
+    transport: http-webhook
+    events:
+      - status: queued
+        description: The call has been queued.
+      - status: ringing
+        description: The call is ringing.
+      - status: in-progress
+        description: The call has connected and is in progress.
+      - status: finished
+        description: The call has ended.

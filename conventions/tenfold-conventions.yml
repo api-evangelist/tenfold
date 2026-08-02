@@ -1,0 +1,42 @@
+generated: '2026-07-21'
+method: searched
+source: https://apidocs.tenfold.com/
+description: >-
+  Cross-cutting request/response semantics for the Tenfold API, captured from the
+  public documentation at https://apidocs.tenfold.com/ and derived from the
+  documented endpoint surface.
+authentication:
+  style: bearer-token
+  schemes: [oauth2, jwt-bearer]
+  header: 'Authorization: Bearer <token>'  # OAuth: "Bearer <token>", JWT: "Bearer JWT <token>"
+  ref: authentication/tenfold-authentication.yml
+versioning:
+  scheme: uri-path
+  versions: [v1, v2]
+  current: v2
+  notes: >-
+    v1 (path prefix /api/v1) is deprecated and will be discontinued; v2 (path
+    prefix /v2) is the modern, standardized surface. Beta endpoints (e.g. contact
+    lists) may change without backward-compatibility guarantees.
+  ref: lifecycle/tenfold-lifecycle.yml
+pagination:
+  style: page-number
+  params:
+    page: { in: query, default: 0, description: Zero-based page index }
+    pageSize: { in: query, default: 50, max: 500, description: Items per page (v2 max 500) }
+  applies_to: list endpoints (calls, users, analytics)
+idempotency:
+  supported: false
+  notes: No idempotency key header is documented by Tenfold.
+rate_limiting:
+  documented: false
+  notes: No published rate-limit policy or response headers found in the docs.
+events:
+  supported: true
+  mechanism: webhooks
+  event_types: [queued, ringing, in-progress, finished]
+  ref: asyncapi/tenfold-webhooks.yml
+error_envelope:
+  format: json
+  status_codes: [400, 401, 404, 405, 418, 500, 503]
+  ref: errors/tenfold-problem-types.yml

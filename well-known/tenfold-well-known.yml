@@ -1,0 +1,12 @@
+generated: '2026-07-21'
+method: probed
+host: https://api.tenfold.com
+documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+notes: >-
+  No /.well-known discovery documents are published on api.tenfold.com (both
+  security.txt and openid-configuration return 404). Recorded as a negative
+  result; no WellKnown scoring pointer emitted.

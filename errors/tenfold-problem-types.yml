@@ -1,0 +1,30 @@
+generated: '2026-07-21'
+method: searched
+source: https://apidocs.tenfold.com/
+format: http-status
+description: >-
+  HTTP error status codes documented for the Tenfold API. Tenfold does not
+  publish RFC 9457 problem+json types; these are the status codes and meanings
+  listed in the public API reference at https://apidocs.tenfold.com/.
+problems:
+  - status: 400
+    title: Bad Request
+    detail: Your request failed.
+  - status: 401
+    title: Unauthorized
+    detail: Your OAuth or JWT token is missing or incorrect.
+  - status: 404
+    title: Not Found
+    detail: The specified path or resource does not exist.
+  - status: 405
+    title: Method Not Allowed
+    detail: The HTTP method is not permitted on this resource.
+  - status: 418
+    title: I'm a teapot
+    detail: Documented humorous status code.
+  - status: 500
+    title: Internal Server Error
+    detail: Server error.
+  - status: 503
+    title: Service Unavailable
+    detail: The service is temporarily unavailable.

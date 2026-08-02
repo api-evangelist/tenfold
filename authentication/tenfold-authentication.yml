@@ -1,0 +1,35 @@
+generated: '2026-07-21'
+method: searched
+source: https://apidocs.tenfold.com/
+docs: https://apidocs.tenfold.com/
+summary:
+  types: [oauth2, http]
+  http_schemes: [bearer]
+  oauth2_flows: [password, clientCredentials]
+  notes: >-
+    Tenfold supports OAuth 2.0 (Resource Owner Password Credentials and Client
+    Credentials grants) across v1 and v2, and a JWT bearer token obtained from
+    /v2/users/login. v2 primarily uses JWT presented as
+    "Authorization: Bearer JWT <token>". OAuth access tokens are presented as
+    "Authorization: Bearer <token>". No OAuth scope catalog is documented.
+schemes:
+  - name: oauth2Password
+    type: oauth2
+    flow: password
+    tokenUrl: https://api.tenfold.com/v2/oauth/token
+    sources: [openapi/tenfold-openapi.yml]
+  - name: oauth2ClientCredentials
+    type: oauth2
+    flow: clientCredentials
+    tokenUrl: https://api.tenfold.com/v2/oauth/token
+    sources: [openapi/tenfold-openapi.yml]
+  - name: bearerJWT
+    type: http
+    scheme: bearer
+    bearerFormat: JWT
+    login_endpoint: https://api.tenfold.com/v2/users/login
+    sources: [openapi/tenfold-openapi.yml]
+token_endpoints:
+  v1: POST https://api.tenfold.com/api/v1/oauth/token
+  v2: PUT https://api.tenfold.com/v2/oauth/token
+  jwt_login: POST https://api.tenfold.com/v2/users/login

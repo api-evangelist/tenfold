@@ -1,7 +1,30 @@
 aid: tenfold
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tenfold.png
 name: Tenfold
-description: Tenfold is a company surfaced as a portfolio company of a16z, techstars and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Tenfold (a LivePerson company) is a computer-telephony integration (CTI)
+  platform — marketed as the "Customer Experience Cloud" — that connects phone
+  systems and contact-center platforms with CRM and support systems. It surfaces
+  the caller's CRM record on inbound and outbound calls, enables click-to-call,
+  automatic call logging, call notes, and call recording, and connects leading
+  CRMs (Salesforce, Microsoft Dynamics, ServiceNow, Oracle NetSuite, Zendesk,
+  SugarCRM, Bullhorn) with major phone systems (Cisco, Avaya, Genesys, RingCentral,
+  Webex Calling, 3CX, Mitel, and more). Its REST API originates and queries calls,
+  controls recording, manages users and organizations, reads and writes CRM
+  records, and returns call analytics, transcripts, and keyword extraction.
+  Tenfold was acquired by LivePerson in October 2021.
 url: https://raw.githubusercontent.com/api-evangelist/tenfold/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,10 +35,225 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
-apis: []
+- CTI
+- Contact Center
+- Telephony
+- CRM Integration
+- Call Analytics
+- Customer Experience
+- Voice
+apis:
+- aid: tenfold:tenfold-analytics-api
+  name: Tenfold Analytics API
+  description: Call analytics, transcripts, keywords, and reports
+  humanURL: https://apidocs.tenfold.com/
+  baseURL: https://api.tenfold.com
+  tags:
+  - Analytics
+  properties:
+  - type: OpenAPI
+    url: openapi/tenfold-analytics-api-openapi.yml
+  - type: Authentication
+    url: authentication/tenfold-authentication.yml
+  - type: Conventions
+    url: conventions/tenfold-conventions.yml
+  - type: ErrorCatalog
+    url: errors/tenfold-problem-types.yml
+  - type: DataModel
+    url: data-model/tenfold-data-model.yml
+  - type: Lifecycle
+    url: lifecycle/tenfold-lifecycle.yml
+  - type: Deprecation
+    url: lifecycle/tenfold-lifecycle.yml
+  - type: Conformance
+    url: conformance/tenfold-conformance.yml
+  - type: Webhooks
+    url: asyncapi/tenfold-webhooks.yml
+- aid: tenfold:tenfold-authentication-api
+  name: Tenfold Authentication API
+  description: OAuth 2.0 and JWT token issuance and authorization
+  humanURL: https://apidocs.tenfold.com/
+  baseURL: https://api.tenfold.com
+  tags:
+  - Authentication
+  properties:
+  - type: OpenAPI
+    url: openapi/tenfold-authentication-api-openapi.yml
+  - type: Authentication
+    url: authentication/tenfold-authentication.yml
+  - type: Conventions
+    url: conventions/tenfold-conventions.yml
+  - type: ErrorCatalog
+    url: errors/tenfold-problem-types.yml
+  - type: DataModel
+    url: data-model/tenfold-data-model.yml
+  - type: Lifecycle
+    url: lifecycle/tenfold-lifecycle.yml
+  - type: Deprecation
+    url: lifecycle/tenfold-lifecycle.yml
+  - type: Conformance
+    url: conformance/tenfold-conformance.yml
+  - type: Webhooks
+    url: asyncapi/tenfold-webhooks.yml
+- aid: tenfold:tenfold-calls-api
+  name: Tenfold Calls API
+  description: Originate, query, control, and update calls
+  humanURL: https://apidocs.tenfold.com/
+  baseURL: https://api.tenfold.com
+  tags:
+  - Calls
+  properties:
+  - type: OpenAPI
+    url: openapi/tenfold-calls-api-openapi.yml
+  - type: Authentication
+    url: authentication/tenfold-authentication.yml
+  - type: Conventions
+    url: conventions/tenfold-conventions.yml
+  - type: ErrorCatalog
+    url: errors/tenfold-problem-types.yml
+  - type: DataModel
+    url: data-model/tenfold-data-model.yml
+  - type: Lifecycle
+    url: lifecycle/tenfold-lifecycle.yml
+  - type: Deprecation
+    url: lifecycle/tenfold-lifecycle.yml
+  - type: Conformance
+    url: conformance/tenfold-conformance.yml
+  - type: Webhooks
+    url: asyncapi/tenfold-webhooks.yml
+- aid: tenfold:tenfold-contact-lists-api
+  name: Tenfold Contact Lists API
+  description: Contact list management (BETA)
+  humanURL: https://apidocs.tenfold.com/
+  baseURL: https://api.tenfold.com
+  tags:
+  - Contact Lists
+  properties:
+  - type: OpenAPI
+    url: openapi/tenfold-contact-lists-api-openapi.yml
+  - type: Authentication
+    url: authentication/tenfold-authentication.yml
+  - type: Conventions
+    url: conventions/tenfold-conventions.yml
+  - type: ErrorCatalog
+    url: errors/tenfold-problem-types.yml
+  - type: DataModel
+    url: data-model/tenfold-data-model.yml
+  - type: Lifecycle
+    url: lifecycle/tenfold-lifecycle.yml
+  - type: Deprecation
+    url: lifecycle/tenfold-lifecycle.yml
+  - type: Conformance
+    url: conformance/tenfold-conformance.yml
+  - type: Webhooks
+    url: asyncapi/tenfold-webhooks.yml
+- aid: tenfold:tenfold-crm-records-api
+  name: Tenfold CRM Records API
+  description: Create, edit, and query CRM records and interactions
+  humanURL: https://apidocs.tenfold.com/
+  baseURL: https://api.tenfold.com
+  tags:
+  - CRM Records
+  properties:
+  - type: OpenAPI
+    url: openapi/tenfold-crm-records-api-openapi.yml
+  - type: Authentication
+    url: authentication/tenfold-authentication.yml
+  - type: Conventions
+    url: conventions/tenfold-conventions.yml
+  - type: ErrorCatalog
+    url: errors/tenfold-problem-types.yml
+  - type: DataModel
+    url: data-model/tenfold-data-model.yml
+  - type: Lifecycle
+    url: lifecycle/tenfold-lifecycle.yml
+  - type: Deprecation
+    url: lifecycle/tenfold-lifecycle.yml
+  - type: Conformance
+    url: conformance/tenfold-conformance.yml
+  - type: Webhooks
+    url: asyncapi/tenfold-webhooks.yml
+- aid: tenfold:tenfold-organizations-api
+  name: Tenfold Organizations API
+  description: Organization data and integration health
+  humanURL: https://apidocs.tenfold.com/
+  baseURL: https://api.tenfold.com
+  tags:
+  - Organizations
+  properties:
+  - type: OpenAPI
+    url: openapi/tenfold-organizations-api-openapi.yml
+  - type: Authentication
+    url: authentication/tenfold-authentication.yml
+  - type: Conventions
+    url: conventions/tenfold-conventions.yml
+  - type: ErrorCatalog
+    url: errors/tenfold-problem-types.yml
+  - type: DataModel
+    url: data-model/tenfold-data-model.yml
+  - type: Lifecycle
+    url: lifecycle/tenfold-lifecycle.yml
+  - type: Deprecation
+    url: lifecycle/tenfold-lifecycle.yml
+  - type: Conformance
+    url: conformance/tenfold-conformance.yml
+  - type: Webhooks
+    url: asyncapi/tenfold-webhooks.yml
+- aid: tenfold:tenfold-tracking-api
+  name: Tenfold Tracking API
+  description: Custom event tracking
+  humanURL: https://apidocs.tenfold.com/
+  baseURL: https://api.tenfold.com
+  tags:
+  - Tracking
+  properties:
+  - type: OpenAPI
+    url: openapi/tenfold-tracking-api-openapi.yml
+  - type: Authentication
+    url: authentication/tenfold-authentication.yml
+  - type: Conventions
+    url: conventions/tenfold-conventions.yml
+  - type: ErrorCatalog
+    url: errors/tenfold-problem-types.yml
+  - type: DataModel
+    url: data-model/tenfold-data-model.yml
+  - type: Lifecycle
+    url: lifecycle/tenfold-lifecycle.yml
+  - type: Deprecation
+    url: lifecycle/tenfold-lifecycle.yml
+  - type: Conformance
+    url: conformance/tenfold-conformance.yml
+  - type: Webhooks
+    url: asyncapi/tenfold-webhooks.yml
+- aid: tenfold:tenfold-users-api
+  name: Tenfold Users API
+  description: Users, current-user profile, and settings
+  humanURL: https://apidocs.tenfold.com/
+  baseURL: https://api.tenfold.com
+  tags:
+  - Users
+  properties:
+  - type: OpenAPI
+    url: openapi/tenfold-users-api-openapi.yml
+  - type: Authentication
+    url: authentication/tenfold-authentication.yml
+  - type: Conventions
+    url: conventions/tenfold-conventions.yml
+  - type: ErrorCatalog
+    url: errors/tenfold-problem-types.yml
+  - type: DataModel
+    url: data-model/tenfold-data-model.yml
+  - type: Lifecycle
+    url: lifecycle/tenfold-lifecycle.yml
+  - type: Deprecation
+    url: lifecycle/tenfold-lifecycle.yml
+  - type: Conformance
+    url: conformance/tenfold-conformance.yml
+  - type: Webhooks
+    url: asyncapi/tenfold-webhooks.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -24,3 +262,26 @@ maintainers:
 common:
 - type: Website
   url: https://tenfold.com/
+- type: DeveloperPortal
+  url: https://apidocs.tenfold.com/
+- type: APIReference
+  url: https://apidocs.tenfold.com/
+- type: Documentation
+  url: https://docs.tenfold.com/
+- type: Authentication
+  url: authentication/tenfold-authentication.yml
+- type: MCPServer
+  url: mcp/tenfold-mcp.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: Webhooks
+  url: asyncapi/tenfold-webhooks.yml
+- type: Deprecation
+  url: lifecycle/tenfold-lifecycle.yml
+- type: LLMsTxt
+  url: llms/tenfold-llms.txt
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 15
+  pass: local-v1

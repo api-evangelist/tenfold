@@ -1,0 +1,48 @@
+generated: '2026-07-21'
+method: derived
+status: candidate
+source: openapi/tenfold-openapi.yml
+description: >-
+  Candidate MCP server tool surface derived from the Tenfold documented API. No
+  official hosted/remote MCP server was found for Tenfold. Tools map one-to-one
+  to documented v2 operationIds.
+server:
+  name: tenfold
+  transport: http
+tools:
+  - name: list_calls
+    description: List calls with filtering.
+    source_operation: openapi/tenfold-openapi.yml#listCalls
+  - name: get_call
+    description: Get details for a specific call.
+    source_operation: openapi/tenfold-openapi.yml#getCall
+  - name: update_call
+    description: Update a call (notes, matched CRM record).
+    source_operation: openapi/tenfold-openapi.yml#updateCall
+  - name: set_matching_record
+    description: Link a CRM record to a call.
+    source_operation: openapi/tenfold-openapi.yml#setMatchingRecord
+  - name: get_call_transcript
+    description: Retrieve a call transcript.
+    source_operation: openapi/tenfold-openapi.yml#getCallTranscript
+  - name: get_call_keywords
+    description: Extract keywords from a call.
+    source_operation: openapi/tenfold-openapi.yml#getCallKeywords
+  - name: search_analytics
+    description: Search calls by query terms.
+    source_operation: openapi/tenfold-openapi.yml#searchAnalytics
+  - name: list_users
+    description: List users in the current organization.
+    source_operation: openapi/tenfold-openapi.yml#listUsers
+  - name: get_current_user
+    description: Fetch the authenticated user's profile.
+    source_operation: openapi/tenfold-openapi.yml#getCurrentUser
+  - name: create_crm_record
+    description: Create a CRM record.
+    source_operation: openapi/tenfold-openapi.yml#createCrmRecord
+  - name: update_crm_record
+    description: Update a CRM record.
+    source_operation: openapi/tenfold-openapi.yml#updateCrmRecord
+  - name: get_company_analytics
+    description: Organization-wide call analytics.
+    source_operation: openapi/tenfold-openapi.yml#getCompanyAnalytics

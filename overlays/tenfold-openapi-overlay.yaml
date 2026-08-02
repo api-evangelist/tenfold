@@ -1,0 +1,23 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Tenfold
+  version: 1.0.0
+extends: openapi/tenfold-openapi.yml
+actions:
+  - target: $.info
+    update:
+      x-apievangelist-enriched: true
+      x-apievangelist-source: https://apidocs.tenfold.com/
+      x-apievangelist-notes: >-
+        Spec generated from Tenfold's public documented endpoint reference; the
+        provider does not publish an OpenAPI document. v1 operations are
+        deprecated.
+  - target: $.paths['/api/v1/calls/originate'].post
+    update:
+      deprecated: true
+  - target: $.paths['/api/v1/calls'].get
+    update:
+      deprecated: true
+  - target: $.paths['/v1/crm/record'].put
+    update:
+      deprecated: true
