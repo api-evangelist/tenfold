@@ -1,0 +1,141 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Tenfold Analytics Contact Lists API",
+    "version": "2.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Contact Lists",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List the user's contact lists (BETA)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tenfold.com/v2/contact-lists"
+          },
+          "docs": "List the user's contact lists (BETA)"
+        },
+        {
+          "info": {
+            "name": "Create a new contact list (BETA)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.tenfold.com/v2/contact-lists"
+          },
+          "docs": "Create a new contact list (BETA)"
+        },
+        {
+          "info": {
+            "name": "Retrieve a specific contact list (BETA)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tenfold.com/v2/contact-lists/:listId",
+            "params": [
+              {
+                "name": "listId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve a specific contact list (BETA)"
+        },
+        {
+          "info": {
+            "name": "Update a contact list (BETA)",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.tenfold.com/v2/contact-lists/:listId",
+            "params": [
+              {
+                "name": "listId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update a contact list (BETA)"
+        },
+        {
+          "info": {
+            "name": "Delete a contact list (BETA)",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.tenfold.com/v2/contact-lists/:listId",
+            "params": [
+              {
+                "name": "listId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a contact list (BETA)"
+        },
+        {
+          "info": {
+            "name": "Add a contact to a list (BETA)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.tenfold.com/v2/contact-lists/:listId/contacts",
+            "params": [
+              {
+                "name": "listId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Add a contact to a list (BETA)"
+        },
+        {
+          "info": {
+            "name": "Remove a contact from a list (BETA)",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.tenfold.com/v2/contact-lists/:listId/contacts/:contactId",
+            "params": [
+              {
+                "name": "listId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "contactId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Remove a contact from a list (BETA)"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

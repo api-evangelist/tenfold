@@ -1,0 +1,229 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Tenfold Analytics Calls API",
+    "version": "2.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Calls",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Initiate an outbound call (v1)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.tenfold.com/api/v1/calls/originate"
+          },
+          "docs": "Initiate an outbound call (v1)"
+        },
+        {
+          "info": {
+            "name": "List all calls, paginated (v1)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tenfold.com/api/v1/calls",
+            "params": [
+              {
+                "name": "page",
+                "value": "",
+                "type": "query",
+                "description": "Zero-based page index."
+              },
+              {
+                "name": "pageSize",
+                "value": "",
+                "type": "query",
+                "description": "Page size (v2 max 500)."
+              }
+            ]
+          },
+          "docs": "List all calls, paginated (v1)"
+        },
+        {
+          "info": {
+            "name": "Retrieve a specific call (v1)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tenfold.com/api/v1/calls/:callId",
+            "params": [
+              {
+                "name": "callId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve a specific call (v1)"
+        },
+        {
+          "info": {
+            "name": "Enable call recording (v1)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.tenfold.com/api/v1/calls/:callId/startRecording",
+            "params": [
+              {
+                "name": "callId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Enable call recording (v1)"
+        },
+        {
+          "info": {
+            "name": "Disable call recording (v1)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.tenfold.com/api/v1/calls/:callId/stopRecording",
+            "params": [
+              {
+                "name": "callId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Disable call recording (v1)"
+        },
+        {
+          "info": {
+            "name": "Terminate an active call (v1)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.tenfold.com/api/v1/calls/:callId/hangup",
+            "params": [
+              {
+                "name": "callId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Terminate an active call (v1)"
+        },
+        {
+          "info": {
+            "name": "List calls with enhanced filtering (v2)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tenfold.com/v2/calls",
+            "params": [
+              {
+                "name": "page",
+                "value": "",
+                "type": "query",
+                "description": "Zero-based page index."
+              },
+              {
+                "name": "pageSize",
+                "value": "",
+                "type": "query",
+                "description": "Page size (v2 max 500)."
+              }
+            ]
+          },
+          "docs": "List calls with enhanced filtering (v2)"
+        },
+        {
+          "info": {
+            "name": "Get call details (v2)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tenfold.com/v2/calls/:callId",
+            "params": [
+              {
+                "name": "callId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get call details (v2)"
+        },
+        {
+          "info": {
+            "name": "Update a call (notes, CRM record)",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.tenfold.com/v2/calls/:callId",
+            "params": [
+              {
+                "name": "callId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update a call (notes, CRM record)"
+        },
+        {
+          "info": {
+            "name": "Link a CRM record to a call",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.tenfold.com/v2/calls/:callId/set-matching-record",
+            "params": [
+              {
+                "name": "callId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Link a CRM record to a call"
+        },
+        {
+          "info": {
+            "name": "Retrieve call transfer history",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tenfold.com/v2/calls/:callId/transfer-history",
+            "params": [
+              {
+                "name": "callId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve call transfer history"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

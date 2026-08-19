@@ -1,0 +1,119 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Tenfold Analytics Users API",
+    "version": "2.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Users",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List organization users (v1)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tenfold.com/api/v1/users"
+          },
+          "docs": "List organization users (v1)"
+        },
+        {
+          "info": {
+            "name": "List users in the current organization (v2)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tenfold.com/v2/users"
+          },
+          "docs": "List users in the current organization (v2)"
+        },
+        {
+          "info": {
+            "name": "Get a specific user account",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tenfold.com/v2/users/:userId",
+            "params": [
+              {
+                "name": "userId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a specific user account"
+        },
+        {
+          "info": {
+            "name": "Fetch own user profile",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tenfold.com/v2/users/me"
+          },
+          "docs": "Fetch own user profile"
+        },
+        {
+          "info": {
+            "name": "Retrieve current-user settings",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tenfold.com/v2/users/me/settings"
+          },
+          "docs": "Retrieve current-user settings"
+        },
+        {
+          "info": {
+            "name": "Update current-user settings",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.tenfold.com/v2/users/me/settings"
+          },
+          "docs": "Update current-user settings"
+        },
+        {
+          "info": {
+            "name": "Upload a profile photo",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.tenfold.com/v2/users/me/profile-picture"
+          },
+          "docs": "Upload a profile photo"
+        },
+        {
+          "info": {
+            "name": "Remove the profile picture",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.tenfold.com/v2/users/me/profile-picture"
+          },
+          "docs": "Remove the profile picture"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,227 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Tenfold Analytics API",
+    "version": "2.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Analytics",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search calls by query terms",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tenfold.com/v2/analytics/search"
+          },
+          "docs": "Search calls by query terms"
+        },
+        {
+          "info": {
+            "name": "List a user's calls",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tenfold.com/v2/analytics/users/:userId/calls",
+            "params": [
+              {
+                "name": "userId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List a user's calls"
+        },
+        {
+          "info": {
+            "name": "Retrieve a call transcript",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tenfold.com/v2/analytics/calls/:callId/transcript",
+            "params": [
+              {
+                "name": "callId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve a call transcript"
+        },
+        {
+          "info": {
+            "name": "Extract keywords from a call",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tenfold.com/v2/analytics/calls/:callId/keywords",
+            "params": [
+              {
+                "name": "callId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Extract keywords from a call"
+        },
+        {
+          "info": {
+            "name": "Analyze conversation metrics for a call",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tenfold.com/v2/analytics/calls/:callId/conversation",
+            "params": [
+              {
+                "name": "callId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Analyze conversation metrics for a call"
+        },
+        {
+          "info": {
+            "name": "List CRM errors for a call",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tenfold.com/v2/analytics/calls/:callId/errors",
+            "params": [
+              {
+                "name": "callId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List CRM errors for a call"
+        },
+        {
+          "info": {
+            "name": "User-level analytics data",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tenfold.com/v2/analytics/users/:userId",
+            "params": [
+              {
+                "name": "userId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "User-level analytics data"
+        },
+        {
+          "info": {
+            "name": "Analytics across all teams",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tenfold.com/v2/analytics/teams"
+          },
+          "docs": "Analytics across all teams"
+        },
+        {
+          "info": {
+            "name": "Team-specific analytics",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tenfold.com/v2/analytics/teams/:teamId",
+            "params": [
+              {
+                "name": "teamId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Team-specific analytics"
+        },
+        {
+          "info": {
+            "name": "Organization-wide analytics",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tenfold.com/v2/analytics/company"
+          },
+          "docs": "Organization-wide analytics"
+        },
+        {
+          "info": {
+            "name": "Generate a punch-card report",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.tenfold.com/v2/analytics/reports/punch-card"
+          },
+          "docs": "Generate a punch-card report"
+        },
+        {
+          "info": {
+            "name": "Generate an all-calls report",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.tenfold.com/v2/analytics/reports/all-calls"
+          },
+          "docs": "Generate an all-calls report"
+        },
+        {
+          "info": {
+            "name": "Generate a user-table report",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.tenfold.com/v2/analytics/reports/user-table"
+          },
+          "docs": "Generate a user-table report"
+        },
+        {
+          "info": {
+            "name": "Generate a call-history report",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.tenfold.com/v2/analytics/reports/call-history"
+          },
+          "docs": "Generate a call-history report"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

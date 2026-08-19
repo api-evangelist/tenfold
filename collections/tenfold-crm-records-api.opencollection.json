@@ -1,0 +1,118 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Tenfold Analytics CRM Records API",
+    "version": "2.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "CRM Records",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Edit a CRM record (v1)",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.tenfold.com/v1/crm/record"
+          },
+          "docs": "Edit a CRM record (v1)"
+        },
+        {
+          "info": {
+            "name": "Create a new CRM record",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.tenfold.com/v2/crm/records"
+          },
+          "docs": "Create a new CRM record"
+        },
+        {
+          "info": {
+            "name": "Update a CRM record",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.tenfold.com/v2/crm/records/:recordId",
+            "params": [
+              {
+                "name": "recordId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update a CRM record"
+        },
+        {
+          "info": {
+            "name": "Remove a phone number from a CRM record",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.tenfold.com/v2/crm/records/:recordId/remove-number",
+            "params": [
+              {
+                "name": "recordId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Remove a phone number from a CRM record"
+        },
+        {
+          "info": {
+            "name": "Fetch the most recent interaction for a record",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tenfold.com/v2/crm/records/:recordId/last-interaction",
+            "params": [
+              {
+                "name": "recordId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Fetch the most recent interaction for a record"
+        },
+        {
+          "info": {
+            "name": "Get the current active interaction for a record",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tenfold.com/v2/crm/records/:recordId/active-interaction",
+            "params": [
+              {
+                "name": "recordId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get the current active interaction for a record"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

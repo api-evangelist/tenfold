@@ -1,0 +1,79 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Tenfold Analytics Authentication API",
+    "version": "2.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Authentication",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Obtain or refresh OAuth tokens (v1)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.tenfold.com/api/v1/oauth/token"
+          },
+          "docs": "Obtain or refresh OAuth tokens (v1)"
+        },
+        {
+          "info": {
+            "name": "Generate tokens for another user (admin)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.tenfold.com/api/v1/oauth/token/create"
+          },
+          "docs": "Generate tokens for another user (admin)"
+        },
+        {
+          "info": {
+            "name": "JWT login with credentials",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.tenfold.com/v2/users/login"
+          },
+          "docs": "JWT login with credentials"
+        },
+        {
+          "info": {
+            "name": "Server-side application authorization",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.tenfold.com/v2/oauth/authorize"
+          },
+          "docs": "Server-side application authorization"
+        },
+        {
+          "info": {
+            "name": "Grant OAuth tokens via code or refresh token (v2)",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.tenfold.com/v2/oauth/token"
+          },
+          "docs": "Grant OAuth tokens via code or refresh token (v2)"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
