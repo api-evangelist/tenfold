@@ -182,6 +182,8 @@ apis:
   humanURL: https://apidocs.tenfold.com/
   baseURL: https://api.tenfold.com
   tags:
+  - Organization
+  tags_raw:
   - Organizations
   properties:
   - type: OpenAPI
@@ -234,6 +236,8 @@ apis:
   humanURL: https://apidocs.tenfold.com/
   baseURL: https://api.tenfold.com
   tags:
+  - User
+  tags_raw:
   - Users
   properties:
   - type: OpenAPI
