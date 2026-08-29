@@ -275,6 +275,9 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: CapabilityMap
+  url: capabilities/tenfold-capability-edges.yml
+  name: Tenfold Business Capability Map
 - type: Overlay
   url: overlays/tenfold-openapi-overlay.yaml
 - type: Website
