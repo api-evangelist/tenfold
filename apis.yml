@@ -276,6 +276,11 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: ParentCompany
+  url: https://apis.io/providers/liveperson/
+  name: LivePerson
+  x-relationship: acquired
+  x-evidence: "description names LivePerson and https://tenfold.com/ now redirects to liveperson.com (roadmap#390, corroborate-dead.py)"
 - type: CapabilityMap
   url: capabilities/tenfold-capability-edges.yml
   name: Tenfold Business Capability Map
