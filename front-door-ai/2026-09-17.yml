@@ -1,0 +1,33 @@
+# Front Door AI Index — tenfold — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: tenfold
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: tenfold.com
+  final_host: www.liveperson.com
+  ownership: inherited
+  owner: tenfold
+  shares_host_with: null
+  inherited_from: www.liveperson.com
+  verdict: scored
+  score: null
+  host_score: 46
+  density: null
+  words: 1178
+  tiers:
+    agentic: 14
+    core: 32
+    model: 0
+  ambiguous: 21
+  top_terms:
+    AI: 28
+    agent: 17
+    conversational AI: 9
+    AI agent: 4
+    intelligence: 3
+    LLMs: 2
+    generative ai: 2
+    automation: 1
+    chatbot: 1

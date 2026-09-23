@@ -1,21 +1,14 @@
 {
   "provider": "tenfold",
   "sources": [
-    "tenfold-analytics-api-openapi.yml",
-    "tenfold-authentication-api-openapi.yml",
-    "tenfold-calls-api-openapi.yml",
-    "tenfold-contact-lists-api-openapi.yml",
-    "tenfold-crm-records-api-openapi.yml",
-    "tenfold-organizations-api-openapi.yml",
-    "tenfold-tracking-api-openapi.yml",
-    "tenfold-users-api-openapi.yml"
+    "_original/tenfold-openapi.yml"
   ],
   "outputs": [
     "tenfold-analytics-api-openapi.yml",
     "tenfold-authentication-api-openapi.yml",
+    "tenfold-crm-records-api-openapi.yml",
     "tenfold-calls-api-openapi.yml",
     "tenfold-contact-lists-api-openapi.yml",
-    "tenfold-crm-records-api-openapi.yml",
     "tenfold-organizations-api-openapi.yml",
     "tenfold-tracking-api-openapi.yml",
     "tenfold-users-api-openapi.yml"
@@ -23,6 +16,19 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "tenfold-openapi.yml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "tenfold-analytics-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "tenfold-authentication-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "tenfold-calls-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "tenfold-contact-lists-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "tenfold-crm-records-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "tenfold-organizations-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "tenfold-tracking-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "tenfold-users-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
