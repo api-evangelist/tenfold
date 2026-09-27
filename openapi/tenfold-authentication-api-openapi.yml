@@ -83,10 +83,10 @@ paths:
           $ref: '#/components/responses/BadRequest'
 components:
   responses:
-    Unauthorized:
-      description: Unauthorized – Your OAuth/JWT token is missing or incorrect
     BadRequest:
       description: Bad Request – Your request failed
+    Unauthorized:
+      description: Unauthorized – Your OAuth/JWT token is missing or incorrect
   securitySchemes:
     oauth2Password:
       type: oauth2

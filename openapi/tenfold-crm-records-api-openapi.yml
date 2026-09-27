@@ -113,10 +113,10 @@ paths:
           $ref: '#/components/responses/NotFound'
 components:
   responses:
-    NotFound:
-      description: Not Found – The specified path or resource does not exist
     BadRequest:
       description: Bad Request – Your request failed
+    NotFound:
+      description: Not Found – The specified path or resource does not exist
   securitySchemes:
     oauth2Password:
       type: oauth2
