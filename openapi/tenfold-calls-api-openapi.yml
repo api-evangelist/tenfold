@@ -198,6 +198,13 @@ paths:
         '404':
           $ref: '#/components/responses/NotFound'
 components:
+  responses:
+    NotFound:
+      description: Not Found – The specified path or resource does not exist
+    BadRequest:
+      description: Bad Request – Your request failed
+    Unauthorized:
+      description: Unauthorized – Your OAuth/JWT token is missing or incorrect
   parameters:
     page:
       name: page
@@ -216,13 +223,6 @@ components:
         type: integer
         default: 50
         maximum: 500
-  responses:
-    BadRequest:
-      description: Bad Request – Your request failed
-    NotFound:
-      description: Not Found – The specified path or resource does not exist
-    Unauthorized:
-      description: Unauthorized – Your OAuth/JWT token is missing or incorrect
   securitySchemes:
     oauth2Password:
       type: oauth2
