@@ -199,12 +199,12 @@ paths:
           $ref: '#/components/responses/NotFound'
 components:
   responses:
-    BadRequest:
-      description: Bad Request – Your request failed
-    Unauthorized:
-      description: Unauthorized – Your OAuth/JWT token is missing or incorrect
     NotFound:
       description: Not Found – The specified path or resource does not exist
+    Unauthorized:
+      description: Unauthorized – Your OAuth/JWT token is missing or incorrect
+    BadRequest:
+      description: Bad Request – Your request failed
   parameters:
     pageSize:
       name: pageSize
