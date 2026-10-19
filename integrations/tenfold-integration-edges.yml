@@ -1,5 +1,5 @@
 generated: '2026-10-12'
-method: none
+method: searched
 source:
 - https://zapier.com/apps/tenfold/integrations
 - https://n8n.io/integrations/tenfold/
@@ -10,7 +10,25 @@ checked:
 - https://monid.ai/tools/tenfold
 - https://n8n.io/integrations/tenfold/
 - https://zapier.com/apps/tenfold/integrations
+- zendesk/integrations/zendesk-integration-edges.yml
 summary: null
 marketplace_apps: []
-edges: []
+edges:
+- partner_name: Zendesk (own)
+  partner: zendesk
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://www.zendesk.com/marketplace/apps/support/211525/tenfold-cti-voice-integration-for-zendesk/
+  mirror_of: zendesk/integrations/zendesk-integration-edges.yml
+  apps:
+  - Tenfold CTI & Voice Integration for Zendesk
+  listing_count: 1
+  detected: '2026-10-19'
+  detected_by: mirror-platform-listings.py
+  category: Contact Center
 templates: []
